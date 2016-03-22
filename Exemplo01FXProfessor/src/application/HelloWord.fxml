@@ -7,9 +7,9 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.60">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <SplitPane dividerPositions="0.29797979797979796" layoutX="41.0" layoutY="55.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -27,7 +27,14 @@
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
                                     <Label layoutX="38.0" layoutY="61.0" text="Nome:" />
-                                    <TextField layoutX="80.0" layoutY="56.0" />
+                                    <TextField fx:id="tfNome" layoutX="80.0" layoutY="56.0" />
+                                    <Pane layoutX="2.0" layoutY="297.0" prefHeight="48.0" prefWidth="416.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                       <children>
+                                          <Button fx:id="btnSalvar" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
+                                          <Button fx:id="btnExcluir" layoutX="84.0" layoutY="11.0" mnemonicParsing="false" onAction="#excluir" text="Excluir" />
+                                       </children>
+                                    </Pane>
+                                    <Label layoutX="14.0" layoutY="274.0" />
                                  </children>
                               </AnchorPane>
                         </content>
