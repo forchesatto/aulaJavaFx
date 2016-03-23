@@ -5,13 +5,15 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HelloWordController">
    <children>
-      <SplitPane dividerPositions="0.29797979797979796" layoutX="41.0" layoutY="55.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <SplitPane dividerPositions="0.29797979797979796" layoutX="41.0" layoutY="55.0" prefHeight="400.0" prefWidth="695.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
@@ -24,7 +26,7 @@
                     <tabs>
                       <Tab text="Dados Básicos">
                         <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="430.0" prefWidth="474.0">
                                  <children>
                                     <Label layoutX="38.0" layoutY="61.0" text="Nome:" />
                                     <TextField fx:id="tfNome" layoutX="80.0" layoutY="56.0" />
@@ -35,6 +37,11 @@
                                        </children>
                                     </Pane>
                                     <Label fx:id="lblMsgSalvar" layoutX="14.0" layoutY="274.0" />
+                                    <TableView fx:id="tblNomes" layoutX="38.0" layoutY="97.0" prefHeight="157.0" prefWidth="416.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="colNome" minWidth="-1.0" prefWidth="415.0" text="Nome" />
+                                      </columns>
+                                    </TableView>
                                  </children>
                               </AnchorPane>
                         </content>

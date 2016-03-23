@@ -1,9 +1,9 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 .msgSalvar{
-	-fx-background-color: blue;
+	-fx-text-fill: blue;
 }
 
 .msgExcluir{
-	-fx-background-color: red;
+	-fx-text-fill: red;
 }
 
