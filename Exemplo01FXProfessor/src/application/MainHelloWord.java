@@ -20,6 +20,8 @@ public class MainHelloWord extends Application {
 			AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("HelloWord.fxml"));
 			// Cria a cena com base no root(AnchorPane)
 			Scene scene = new Scene(root);
+			// Seta o arquivo de css que será usado no formulário.
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			// Seta para o palco a cena
 			primaryStage.setScene(scene);
 			// Faz mostrar a tela.
