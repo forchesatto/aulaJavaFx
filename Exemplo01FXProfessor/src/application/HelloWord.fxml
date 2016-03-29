@@ -11,15 +11,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HelloWordController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HelloWordController">
    <children>
-      <SplitPane dividerPositions="0.29797979797979796" layoutX="41.0" layoutY="55.0" prefHeight="400.0" prefWidth="695.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <SplitPane layoutX="41.0" layoutY="55.0" prefHeight="400.0" prefWidth="695.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-               <children>
-                  <Button layoutX="14.0" layoutY="21.0" mnemonicParsing="false" text="Novo" />
-               </children>
-            </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
                   <TabPane layoutX="33.0" layoutY="28.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -36,7 +31,7 @@
                                           <Button fx:id="btnExcluir" layoutX="84.0" layoutY="11.0" mnemonicParsing="false" onAction="#excluir" text="Excluir" />
                                        </children>
                                     </Pane>
-                                    <Label fx:id="lblMsgSalvar" layoutX="14.0" layoutY="274.0" />
+                                    <Label fx:id="lblMsgSalvar" layoutX="14.0" layoutY="274.0" maxHeight="16.0" maxWidth="554.0" minHeight="16.0" minWidth="554.0" prefHeight="16.0" prefWidth="554.0" />
                                     <TableView fx:id="tblNomes" layoutX="38.0" layoutY="97.0" prefHeight="157.0" prefWidth="416.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                                       <columns>
                                         <TableColumn fx:id="colNome" minWidth="-1.0" prefWidth="415.0" text="Nome" />
@@ -44,11 +39,6 @@
                                     </TableView>
                                  </children>
                               </AnchorPane>
-                        </content>
-                      </Tab>
-                      <Tab text="Endereço">
-                        <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
                         </content>
                       </Tab>
                     </tabs>
