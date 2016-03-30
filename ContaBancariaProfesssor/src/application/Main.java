@@ -24,6 +24,8 @@ public class Main extends Application {
 			Scene scene = new Scene(rootLayout);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 
+			primaryStage.setTitle("Sistema para contas bancarias");
+
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch (Exception e) {

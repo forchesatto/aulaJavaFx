@@ -6,6 +6,7 @@ import application.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -16,7 +17,13 @@ public class MainController {
 	private BorderPane panelPrincipal;
 
 	@FXML
-	private MenuItem mniAgencia;
+	private Menu menuCadastro;
+
+	@FXML
+	private MenuItem menuItemAgencia;
+
+	@FXML
+	private MenuItem menuItemPessoa;
 
 	@FXML
 	public void onActionAgencia(ActionEvent e) {
