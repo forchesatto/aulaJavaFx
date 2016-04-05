@@ -18,6 +18,11 @@
                         <MenuItem fx:id="menuItemPessoa" mnemonicParsing="false" text="Pessoa" />
                   </items>
                 </Menu>
+                  <Menu mnemonicParsing="false" text="Janela">
+                    <items>
+                      <MenuItem fx:id="menuFechar" mnemonicParsing="false" onAction="#onActionMenuFechar" text="Fechar" />
+                    </items>
+                  </Menu>
               </menus>
             </MenuBar>
          </top>

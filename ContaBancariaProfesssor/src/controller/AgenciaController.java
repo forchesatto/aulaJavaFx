@@ -11,14 +11,15 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import model.Agencia;
+import view.componente.Alerta;
 
 public class AgenciaController {
 
 	@FXML
-	private Button btnSalvar;
+	private Button btnCancelar;
 
 	@FXML
-	private Button btnCancelar;
+	private Button btnNovo;
 
 	@FXML
 	private TextField tfNumero;
@@ -51,7 +52,7 @@ public class AgenciaController {
 
 	@FXML
 	private void onActionCancelar(ActionEvent event) {
-
+		limparCampos();
 	}
 
 	@FXML
@@ -63,12 +64,34 @@ public class AgenciaController {
 		if (!editar) {
 			agenciaList.add(agencia);
 		}
+		limparCampos();
+	}
+
+	@FXML
+	public void onActionNovo(ActionEvent e) {
+		this.agencia = Optional.empty();
+		limparCampos();
+	}
+
+	@FXML
+	public void onActionExcluir(ActionEvent e) {
+		if (new Alerta().excluir()) {
+			int posicaoTabela = tblAgencia.getSelectionModel().getSelectedIndex();
+			tblAgencia.getItems().remove(posicaoTabela);
+		}
+	}
+
+	private void limparCampos() {
+		tfNome.setText("");
+		tfNumero.setText("");
 	}
 
 	private void populaText(Agencia agencia) {
-		this.agencia = Optional.of(agencia);
-		tfNome.setText(agencia.getNome());
-		tfNumero.setText(agencia.getNumero().toString());
+		this.agencia = Optional.ofNullable(agencia);
+		if (this.agencia.isPresent()) {
+			tfNome.setText(agencia.getNome());
+			tfNumero.setText(agencia.getNumero().toString());
+		}
 	}
 
 }

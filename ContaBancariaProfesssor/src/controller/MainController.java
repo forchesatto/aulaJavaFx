@@ -36,4 +36,10 @@ public class MainController {
 			e1.printStackTrace();
 		}
 	}
+
+	@FXML
+	public void onActionMenuFechar(ActionEvent e) {
+		panelPrincipal.setCenter(null);
+	}
+
 }
