@@ -14,13 +14,13 @@ public class Cliente {
 	private StringProperty cpf;
 	private StringProperty nome;
 	private ObjectProperty<LocalDate> dataNascimento;
-	private StringProperty sexo;
+	private ObjectProperty<Sexo> sexo;
 
 	public Cliente() {
 		cpf = new SimpleStringProperty();
 		nome = new SimpleStringProperty();
 		dataNascimento = new SimpleObjectProperty<>();
-		sexo = new SimpleStringProperty();
+		sexo = new SimpleObjectProperty<>();
 	}
 
 	public String getCpf() {
@@ -47,11 +47,11 @@ public class Cliente {
 		this.dataNascimento.set(dataNascimento);
 	}
 
-	public String getSexo() {
+	public Sexo getSexo() {
 		return sexo.get();
 	}
 
-	public void setSexo(String sexo) {
+	public void setSexo(Sexo sexo) {
 		this.sexo.set(sexo);
 	}
 
@@ -67,7 +67,7 @@ public class Cliente {
 		return dataNascimento;
 	}
 
-	public StringProperty getSexoProperty() {
+	public ObjectProperty<Sexo> getSexoProperty() {
 		return sexo;
 	}
 

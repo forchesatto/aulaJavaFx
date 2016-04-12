@@ -13,6 +13,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import model.Cliente;
+import model.Sexo;
 import view.componente.Alerta;
 
 public class ClienteController {
@@ -75,9 +76,9 @@ public class ClienteController {
 		Cliente cliente = this.cliente.orElse(new Cliente());
 		cliente.setDataNascimento(dpDataNascimento.getValue());
 		if (rbMasculino.isSelected()) {
-			cliente.setSexo("Masculino");
+			cliente.setSexo(Sexo.MASCULINO);
 		} else {
-			cliente.setSexo("Feminino");
+			cliente.setSexo(Sexo.FEMININO);
 		}
 		cliente.setNome(tfNome.getText());
 		cliente.setCpf(tfCpf.getText());
@@ -115,8 +116,8 @@ public class ClienteController {
 		if (this.cliente.isPresent()) {
 			tfNome.setText(cliente.getNome());
 			tfCpf.setText(cliente.getCpf());
-			rbMasculino.setSelected(cliente.getSexo().equals("Masculino"));
-			rbFeminino.setSelected(cliente.getSexo().equals("Feminino"));
+			rbMasculino.setSelected(cliente.getSexo().isMasculino());
+			rbFeminino.setSelected(cliente.getSexo().isFeminino());
 			dpDataNascimento.setValue(cliente.getDataNascimento());
 		}
 	}
