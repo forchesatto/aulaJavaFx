@@ -1,5 +1,7 @@
 package model;
 
+import static java.time.format.DateTimeFormatter.ofPattern;
+
 import java.time.LocalDate;
 
 import javafx.beans.property.ObjectProperty;
@@ -67,6 +69,10 @@ public class Cliente {
 
 	public StringProperty getSexoProperty() {
 		return sexo;
+	}
+
+	public StringProperty getDataNascimentoFormatada() {
+		return new SimpleStringProperty(dataNascimento.get().format(ofPattern("dd/MM/yyyy")));
 	}
 
 }

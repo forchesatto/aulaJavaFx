@@ -21,10 +21,11 @@
             <TextField fx:id="tfCpf" layoutX="152.0" layoutY="59.0" prefHeight="26.0" prefWidth="125.0" />
             <Label layoutX="104.0" layoutY="26.0" text="Nome:" textAlignment="RIGHT" />
             <Label layoutX="121.0" layoutY="64.0" text="CPF:" textAlignment="RIGHT" />
-            <TableView fx:id="tblCliente" layoutY="178.0" prefHeight="223.0" prefWidth="600.0">
+            <TableView fx:id="tblCliente" layoutY="173.0" prefHeight="224.0" prefWidth="626.0">
               <columns>
-                <TableColumn fx:id="tbcNome" prefWidth="391.0" text="Nome" />
-                <TableColumn fx:id="tbcCpf" prefWidth="259.0" text="CPF" />
+                <TableColumn fx:id="tbcNome" prefWidth="294.0" text="Nome" />
+                  <TableColumn fx:id="tbcDataNascimento" minWidth="50.0" prefWidth="135.0" text="Data Nascimento" />
+                <TableColumn fx:id="tbcCpf" prefWidth="296.0" text="CPF" />
               </columns>
             </TableView>
             <Button fx:id="btnNovo" layoutX="100.0" layoutY="144.0" mnemonicParsing="false" onAction="#onActionNovo" text="Novo" />

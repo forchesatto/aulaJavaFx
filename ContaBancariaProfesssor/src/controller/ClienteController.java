@@ -38,6 +38,9 @@ public class ClienteController {
 	@FXML
 	private TableColumn<Cliente, String> tbcNome;
 
+	@FXML
+	private TableColumn<Cliente, String> tbcDataNascimento;
+
 	private ObservableList<Cliente> clienteList = FXCollections.observableArrayList();
 
 	private Optional<Cliente> cliente = Optional.empty();
@@ -55,8 +58,8 @@ public class ClienteController {
 	private void initialize() {
 		tbcNome.setCellValueFactory(cellData -> cellData.getValue().getNomeProperty());
 		tbcCpf.setCellValueFactory(c -> c.getValue().getCpfProperty());
+		tbcDataNascimento.setCellValueFactory(c -> c.getValue().getDataNascimentoFormatada());
 		tblCliente.setItems(clienteList);
-
 		tblCliente.getSelectionModel().selectedItemProperty()
 				.addListener((observable, clienteAnterior, cliente) -> populaText(cliente));
 	}
