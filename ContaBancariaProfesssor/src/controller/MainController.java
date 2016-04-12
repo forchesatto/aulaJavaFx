@@ -23,7 +23,7 @@ public class MainController {
 	private MenuItem menuItemAgencia;
 
 	@FXML
-	private MenuItem menuItemPessoa;
+	private MenuItem menuItemCliente;
 
 	@FXML
 	public void onActionAgencia(ActionEvent e) {
@@ -32,6 +32,18 @@ public class MainController {
 		try {
 			AnchorPane agenciaView = (AnchorPane) loader.load();
 			panelPrincipal.setCenter(agenciaView);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+	}
+
+	@FXML
+	public void onActionCliente(ActionEvent e) {
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(getClass().getResource(Main.PATH_VIEW + "Cliente.fxml"));
+		try {
+			AnchorPane clienteView = (AnchorPane) loader.load();
+			panelPrincipal.setCenter(clienteView);
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
