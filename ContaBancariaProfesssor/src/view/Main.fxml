@@ -16,9 +16,10 @@
                   <items>
                     <MenuItem fx:id="menuItemAgencia" mnemonicParsing="false" onAction="#onActionAgencia" text="Agência" />
                         <MenuItem fx:id="menuItemCliente" mnemonicParsing="false" onAction="#onActionCliente" text="Cliente" />
+                        <MenuItem fx:id="menuItemConta" mnemonicParsing="false" onAction="#onActionConta" text="Conta" />
                   </items>
                 </Menu>
-                  <Menu mnemonicParsing="false" text="Janela">
+                  <Menu fx:id="menuItemConta" mnemonicParsing="false" onAction="#onActionConta" text="Janela">
                     <items>
                       <MenuItem fx:id="menuFechar" mnemonicParsing="false" onAction="#onActionMenuFechar" text="Fechar" />
                     </items>

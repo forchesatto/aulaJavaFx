@@ -49,6 +49,17 @@ public class MainController {
 		}
 	}
 
+	public void onActionConta(ActionEvent e) {
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(getClass().getResource(Main.PATH_VIEW + "Conta.fxml"));
+		try {
+			AnchorPane contaView = (AnchorPane) loader.load();
+			panelPrincipal.setCenter(contaView);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+	}
+
 	@FXML
 	public void onActionMenuFechar(ActionEvent e) {
 		panelPrincipal.setCenter(null);

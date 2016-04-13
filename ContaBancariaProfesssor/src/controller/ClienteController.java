@@ -7,7 +7,9 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -55,6 +57,8 @@ public class ClienteController {
 	@FXML
 	private RadioButton rbFeminino;
 
+	private ComboBox<Cliente> combo;
+
 	@FXML
 	private void initialize() {
 		tbcNome.setCellValueFactory(cellData -> cellData.getValue().getNomeProperty());
@@ -63,6 +67,20 @@ public class ClienteController {
 		tblCliente.setItems(clienteList);
 		tblCliente.getSelectionModel().selectedItemProperty()
 				.addListener((observable, clienteAnterior, cliente) -> populaText(cliente));
+
+		combo.setCellFactory((comboBox) -> {
+			return new ListCell<Cliente>() {
+				@Override
+				protected void updateItem(Cliente item, boolean empty) {
+					super.updateItem(item, empty);
+					if (item == null || empty) {
+						setText(null);
+					} else {
+						setText(item.getNome());
+					}
+				}
+			};
+		});
 	}
 
 	@FXML
