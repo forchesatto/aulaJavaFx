@@ -46,7 +46,6 @@ public class ContaController {
 
 	@FXML
 	private ComboBox<Cliente> cbCliente;
-	private ObservableList<Cliente> clientes = FXCollections.observableArrayList();
 
 	@FXML
 	private ComboBox<Agencia> cbAgencia;
@@ -56,11 +55,11 @@ public class ContaController {
 	private void initialize() {
 		Cliente cliente = new Cliente();
 		cliente.setNome("Andre");
-		// Popula os clientes para dentro do combobox
-		clientes.add(cliente);
-		cbCliente.setItems(clientes);
 
-		// Define os valores que serão mostrados quando o combobox e aberto
+		cbCliente.getItems().addAll(cliente);
+
+		// Define os valores que serão mostrados
+		// quando o combobox e aberto
 		cbCliente.setCellFactory((comboBox) -> {
 			return new ListCell<Cliente>() {
 				@Override
@@ -70,7 +69,7 @@ public class ContaController {
 					if (item == null || empty) {
 						setText(null);
 					} else {
-						setText(cliente.getNome());
+						setText(item.getNome());
 					}
 				}
 			};
